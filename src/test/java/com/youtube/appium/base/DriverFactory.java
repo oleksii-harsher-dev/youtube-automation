@@ -10,13 +10,13 @@ import java.time.Duration;
 public class DriverFactory {
     public static AndroidDriver driver;
     private static final String APPIUM_SERVER_URL = "http://127.0.0.1:4723";
-    private static final String DEVICE_UDID = "R5CW71MQ6HN";
+    private static final String DEVICE_UDID = "YOUR_DEVICE_ID";
 
     private static final String APP_PACKAGE = "com.google.android.youtube";
     private static final String APP_ACTIVITY = "com.google.android.youtube.app.honeycomb.Shell$HomeActivity";
 
     private static final Duration APP_WAIT_DURATION = Duration.ofSeconds(60);
-    private static final int NEW_COMMAND_TIMEOUT = 3000;
+    private static final int NEW_COMMAND_TIMEOUT = 30;
 
     public static AndroidDriver createDriver() throws MalformedURLException {
         UiAutomator2Options options = buildOptions();
